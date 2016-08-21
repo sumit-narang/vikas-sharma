@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="imagefront.css">
+    <link rel="stylesheet" type="text/css" href="top1.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="imagechange.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+</head>
+<body>
+    <div class="pic">
+        
+        <div class="image"><div class="change me"><img src="pictures11/35.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/1.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/30.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/3.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/32.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/8.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/10.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/5.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/6.jpg"></div></div>
+	    <div class="image"><div class="change me"><img src="pictures11/7.jpg" width="211" height="150"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/9.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/11.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/12.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/21.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/15.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/13.jpg" width="198" height="150"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/31.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/17.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/18.jpg" width="181" height="150"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/19.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/2.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/22.jpg" width="180" height="150"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/25.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/24 1.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/26.jpg"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/29.jpg" width="284" height="172"></div></div>
+        <div class="image"><div class="change me"><img src="pictures11/28.jpg" width="271" height="172"></div></div>
+</div>
+    <img class="vik" src="black.png">
+    
+  
+   
+   <img class="border" src="border1.png">
+    <div class="texttop"><p class="title">VIKASH SHARMA</p><br><p class="subheading">FASHION / KNITWEAR DESIGNER</p></div>
+    
+
+    <img src="vikpho.png" class="vikpho">
+
+<div class="copyright"></div>
+<p class="material">2015 &#169; Vikas Sharma. All Rights Reserved</p>
+
+  <a href="../portfolio/portfolio.html"><img src="arrow.png" class="arrow"></a> 
+
+    
+
+
+
+
+<div class="drop">
+    <div class="super"></div>
+<ul class="top">
+    <li class="navg"><a href="#">Portfolio</a></li>
+    <li class="navg"><a href="#">Experience</a></li>
+     <li class="navg"><a href="#">Awards</a></li>
+    <li class="navg"><a href="#">Skills</a></li>
+    <li class="navg"><a class="experi" href="#">Home</a></li>
+</ul>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+var divs = $(".me").toArray();
+var divlength = divs.length;
+var randomnum,lastnum,randomfirstdiv;
+lastnum = 0;
+
+$(document).ready(function(){
+    randomnum = Math.floor(Math.random()*(divlength));
+    randomfirstdiv = divs[randomnum];
+    $(randomfirstdiv).removeClass("change", 1000);
+});
+
+setInterval(function(){
+    if(randomfirstdiv){
+        $(randomfirstdiv).addClass("change", 5000);
+        randomfirstdiv = null;
+    }
+    randomnum = Math.floor(Math.random()*(divlength));
+    console.log("Chosen number is "+randomnum);
+    if(randomnum == lastnum){
+        console.log("We have a duplicate ("+randomnum+")");
+        if( (randomnum-1) >= 0 ){
+            randomnum = (randomnum-1);
+            console.log("Duplicate solved, it is now "+randomnum);
+        }else if( (randomnum+1) <= (divlength) ){
+            randomnum = (randomnum+1);
+            console.log("Duplicate solved, it is now "+randomnum);
+        }
+    }
+    lastnum = randomnum;
+    var randomdiv = divs[randomnum];
+    $(randomdiv).addTemporaryClass("change", 5000);    
+}, 8000);
+
+$.fn.extend({     
+    addTemporaryClass: function(className, duration) {        
+        var elements = this; 
+        clearTimeout(doChange);
+        var doChange = setTimeout(function() {
+            elements.addClass(className, duration);
+        }, duration);
+        return this.each(function() {
+            $(this).removeClass(className, duration);
+        });       
+    }
+});
+</script>
+
+
+
+
+</body>
+</html>

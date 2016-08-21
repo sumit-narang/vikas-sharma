@@ -1,0 +1,34 @@
+.awards112a, .des112a, .des212a, .des312a, .des412a{
+	background: url(sprites.png) no-repeat;
+}
+
+.awards112a{
+	background-position: -504px -135px ;
+	width: 265px;
+	height: 265px;
+}
+
+.des112a{
+	background-position: -355px 0;
+	width: 270px;
+	height: 270px;
+}
+
+.des212a{
+	background-position: -649px 0;
+	width: 270px;
+	height: 270px;
+}
+
+.des312a{
+	background-position: -357px -270px ;
+	width: 270px;
+	height: 270px;
+}
+
+.des412a{
+	background-position: -646px -270px ;
+	width: 270px;
+	height: 270px;
+}
+

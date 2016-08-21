@@ -1,0 +1,47 @@
+.port{
+	width: 100%;
+	position: absolute;
+	margin: 0;
+	left: 0;
+	margin-top: 55px;
+}
+.social{
+	
+	opacity: 1;
+}
+.social:hover{
+	opacity:0.8;
+}
+.icon{
+	list-style-type: none;
+	float: left;
+	margin-left: 10px;
+}
+.network{
+	margin-top: 400px;
+	position: absolute;
+	margin-left: 58px;
+}
+.arrow1{
+	opacity: 0.4;
+	position: absolute;
+	left: 0;
+	margin-top: 45vh;
+	z-index: 1000;
+}
+.arrow{
+	opacity: 0.4;
+	position: absolute;
+	right: 0;
+	margin-top:45vh;
+	z-index: 1000;
+}
+.arrow:hover{
+	opacity: 1;
+}
+.arrow1:hover{
+	opacity: 1;
+}
+.top .experi{
+	color: #00ca94;
+}

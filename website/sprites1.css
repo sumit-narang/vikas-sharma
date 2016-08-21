@@ -1,0 +1,46 @@
+.office1, .transpar, .web1, .transpar, .img22, .transpar, .muci1{
+	background: url(sprites1.png) no-repeat;
+}
+
+.office1{
+	background-position: 0 0;
+	width: 1280px;
+	height: 627px;
+}
+
+.transpar{
+	background-position: -36px -101px ;
+	width: 348px;
+	height: 43px;
+}
+
+.web1{
+	background-position: -36px -143px ;
+	width: 348px;
+	height: 406px;
+}
+
+.transpar{
+	background-position: -475px -98px ;
+	width: 348px;
+	height: 43px;
+}
+
+.img22{
+	background-position: -475px -140px ;
+	width: 348px;
+	height: 408px;
+}
+
+.transpar{
+	background-position: -889px -102px ;
+	width: 348px;
+	height: 43px;
+}
+
+.muci1{
+	background-position: -889px -144px ;
+	width: 348px;
+	height: 406px;
+}
+
